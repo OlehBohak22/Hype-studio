@@ -1,0 +1,89 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-color: rgba(249, 249, 249, 1);
+}
+
+main {
+  flex-grow: 1;
+}
+
+.container {
+  width: 94vw;
+  padding: 0 0.5vw;
+  margin: 0 auto;
+}
+
+section {
+  /* overflow: hidden; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.title {
+  font-family: "Mona-Sans";
+  font-size: 7vw;
+  font-weight: 700;
+  line-height: 7.6vw;
+  color: rgba(22, 22, 22, 1);
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 93.3vw;
+    padding: 0 2vw;
+  }
+
+  .title {
+    font-size: 16.5vw;
+    line-height: 16.5vw;
+  }
+}

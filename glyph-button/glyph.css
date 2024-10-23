@@ -1,0 +1,306 @@
+/* Основний стиль для кнопки */
+.join-link button {
+  font-family: 'Mono-Sans';
+  text-transform: uppercase;
+  color: canvasText;
+  padding: 1rem 5rem;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+/* Ефекти на псевдоелемент при ховері на .join-link */
+.join-link:hover button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: calc(var(--intent, 0) * 0.0875);
+  transition: opacity 0.2s;
+}
+
+/* Псевдокласи для активації ефектів при ховері на .join-link */
+.join-link:hover button {
+  --intent: 1;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Стиль для тексту всередині кнопки */
+button > span:not(.sr-only) {
+  position: relative;
+  color: transparent;
+  font-family: 'Mona-sans';
+  font-size: 1.1vw;
+  font-weight: 800;
+}
+
+/* Колір тексту при ховері на .join-link */
+.best-section .join-link button > span:not(.sr-only)::after {
+  color: rgba(0, 208, 210, 1);
+}
+
+/* Стилі для анімації тексту */
+button > span:not(.sr-only)::after {
+  content: attr(data-char);
+  position: absolute;
+  display: inline-block;
+  inset: 0;
+  color: canvasText;
+}
+
+/* Анімація при ховері на .join-link */
+.join-link:hover button > span:not(.sr-only)::after {
+  animation: flash calc(var(--speed, 0.25) * 1s) calc(var(--index, 0) * 0.05s)
+    steps(1, end);
+}
+
+/* Анімація "перебору" символів */
+@keyframes flash {
+  0%,
+  20% {
+    content: '_';
+  }
+  40% {
+    content: var(--char-1);
+  }
+  60% {
+    content: var(--char-2);
+  }
+  80% {
+    content: var(--char-3);
+  }
+}
+
+.join-link button {
+  display: block;
+}
+
+.dummy {
+  display: none !important;
+}
+
+.join-link .app::before {
+  transition: 0.5s;
+}
+
+.join-link:hover .app::before {
+  transform: translateY(50%) translateX(50%);
+}
+.join-link .app::after {
+  transition: 0.5s;
+}
+
+.join-link:hover .app::after {
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.join-link:hover .arrow-icon {
+  transform: rotate(405deg);
+  fill: white;
+}
+
+.join-link:hover .corner-top-right {
+  transform: translateY(50%) translateX(-50%);
+}
+.join-link:hover .corner-bottom-left {
+  transform: translateY(-50%) translateX(50%);
+}
+
+.join-link {
+  display: flex;
+  gap: 0.2vw;
+  cursor: pointer;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+.app {
+  position: relative;
+  font-family: 'Mona-sans';
+  font-size: 1.1vw;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  border: 0.05vw solid transparent; /* Ширина рамки */
+  border-image-source: radial-gradient(
+    57.98% 57.28% at 52.9% 39.1%,
+    rgba(0, 0, 0, 0.2) 80%,
+    /* Залишається прозорим до 80% */ rgba(21, 21, 21, 0.5) 100%
+      /* Різка зміна на 100% */
+  );
+  border-image-slice: 1; /* Розріз градієнта для рамки */
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.app::before,
+.app::after,
+.app .corner-top-right,
+.app .corner-bottom-left {
+  content: '';
+  position: absolute;
+  border: 0.1vw solid black;
+  width: 0.91vw;
+  width: 0.91vw;
+  height: 0.91vw;
+  transition: 0.5s;
+}
+
+.app::before {
+  top: -1px !important;
+  left: -1px !important;
+  border-right: none;
+  border-bottom: none;
+}
+
+.app::after {
+  bottom: -0.5px !important;
+  right: -1px !important;
+  border-left: none;
+  border-top: none;
+}
+
+.app .corner-top-right {
+  top: -1px !important;
+  right: -1px !important;
+  border-left: none;
+  border-bottom: none;
+}
+
+.app .corner-bottom-left {
+  bottom: -0.5px;
+  left: -1px;
+  border-right: none;
+  border-top: none;
+}
+.join-link-arrow {
+  background-color: rgba(0, 208, 210, 1);
+  width: 5.4vw;
+  height: 5.4vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: 0.5s;
+}
+
+.arrow-icon {
+  fill: rgba(0, 0, 0, 1);
+  width: 0.9vw;
+  height: 1vw;
+  transition: 0.5s;
+}
+
+.lazure button > span:not(.sr-only):after {
+  color: #00d0d2;
+}
+
+.lazure .app:before,
+.lazure .app:after,
+.lazure .app .corner-top-right,
+.lazure .app .corner-bottom-left {
+  content: '';
+  position: absolute;
+  border: 0.06vw solid rgba(0, 208, 210, 1);
+  width: 0.91vw;
+  height: 0.91vw;
+}
+
+.lazure .app:before {
+  border-right: none;
+  border-bottom: none;
+}
+.lazure .app:after {
+  border-left: none;
+  border-top: none;
+}
+.lazure .app .corner-top-right {
+  border-bottom: none;
+  border-left: none;
+}
+.lazure .app .corner-bottom-left {
+  border-right: none;
+  border-top: none;
+}
+
+@media (max-width: 1024px) {
+  .join-link button {
+    padding: 1rem 2rem;
+  }
+
+  .join-link {
+    gap: 0.73vw;
+  }
+
+  button > span:not(.sr-only) {
+    font-size: 3.7vw;
+  }
+
+  .join-link-text {
+    font-size: 3.7vw;
+    padding: 0px 6.6vw;
+    border-width: 0.05vw;
+  }
+
+  .join-link-arrow {
+    width: 17.6vw;
+    height: 17.6vw;
+  }
+
+  .arrow-icon {
+    fill: rgb(0, 0, 0);
+    width: 3.2vw;
+    height: 3.2vw;
+  }
+
+  .join-link-text::before,
+  .join-link-text::after,
+  .join-link-text .corner-top-right,
+  .join-link-text .corner-bottom-left {
+    border: 0.06vw solid black;
+    width: 2.5vw;
+    height: 2.5vw;
+  }
+
+  .join-link-text::before {
+    top: -1px;
+    left: -1px;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .join-link-text::after {
+    bottom: -1px;
+    right: -1px;
+    border-left: none;
+    border-top: none;
+  }
+
+  .join-link-text .corner-top-right {
+    top: -1px;
+    right: -1px;
+    border-left: none;
+    border-bottom: none;
+  }
+
+  .join-link-text .corner-bottom-left {
+    bottom: -1px;
+    left: -1px;
+    border-right: none;
+    border-top: none;
+  }
+}
