@@ -615,6 +615,217 @@ header .container.header-wrapper {
   line-height: 0.9vw;
 }
 
+/* portfolio-slider-section =========================================== */
+.portfolio-slider-section {
+  padding: 14vw 0 10vw 0;
+  overflow: hidden;
+}
+
+.portfolio-swiper-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 8.1vw;
+}
+
+.portfolio-swiper-container .swiper-slide {
+  /* height: 32vw !important; */
+  overflow: hidden;
+  height: auto;
+  box-shadow: 0px 7px 15px 0px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-swiper-container .swiper-slide img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.portfolio-slider-section .title-container {
+  width: 90vw;
+  margin: 0 auto;
+  margin-bottom: 7.1vw;
+}
+
+.portfolio-slider-section .title-container svg {
+  display: block;
+  width: 5.3vw;
+  margin: 0 auto;
+  fill: #000;
+  margin-bottom: 2vw;
+}
+
+.portfolio-slider-section .title-container .title {
+  text-align: center;
+}
+
+.portfolio-swiper-container .swiper-navigation svg {
+  width: 1.1vw;
+  height: 1.1vw;
+  fill: #fff;
+}
+
+.portfolio-swiper-container .swiper-prev svg {
+  transform: rotate(-135deg);
+}
+.portfolio-swiper-container .swiper-next svg {
+  transform: rotate(45deg);
+}
+
+.portfolio-swiper-container .swiper-navigation {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 0px;
+  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  align-items: center;
+  z-index: 999;
+  gap: 35vw;
+}
+
+.portfolio-swiper-container .swiper-prev {
+  backdrop-filter: blur(10px);
+  width: 6.3vw;
+  height: 6.3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border: 1px solid rgb(255 255 255 / 19%);
+  cursor: pointer;
+  background: linear-gradient(
+    169.7deg,
+    rgba(255, 255, 255, 0.16) -17.85%,
+    rgba(255, 255, 255, 0) 117.02%
+  );
+}
+.portfolio-swiper-container .swiper-next {
+  backdrop-filter: blur(10px);
+  width: 6.3vw;
+  height: 6.3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border: 1px solid rgb(255 255 255 / 19%);
+  cursor: pointer;
+  background: linear-gradient(
+    169.7deg,
+    rgba(255, 255, 255, 0.16) -17.85%,
+    rgba(255, 255, 255, 0) 117.02%
+  );
+}
+
+.portfolio-slider-section .join-link {
+  margin: 0 auto;
+}
+
+/* TARIFF_SECTION =================================== */
+
+.tariff-section {
+  padding-bottom: 4.3vw;
+}
+
+.tariff-section h2 {
+  text-transform: uppercase;
+  text-align: center;
+  width: 81vw;
+  margin: 0 auto;
+  margin-bottom: 4.5vw;
+}
+
+.tariff-item {
+  background-image: url(../img/main-page/why-section/why-card-bg.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  padding: 1vw;
+}
+
+.tariff-item.quantum .tariff-item-title-container {
+  background-image: url(../img/tariff/quantum.jpg);
+}
+.tariff-item.hyper .tariff-item-title-container {
+  background-image: url(../img/tariff/hyper.jpg);
+}
+.tariff-item.blast .tariff-item-title-container {
+  background-image: url(../img/tariff/blast.jpg);
+}
+
+.tariff-item.blast {
+  background-color: rgba(0, 208, 210, 1);
+}
+
+.tariff-item.blast .app {
+  background: linear-gradient(
+    169.7deg,
+    rgba(255, 255, 255, 0.16) -17.85%,
+    rgba(255, 255, 255, 0) 117.02%
+  );
+}
+
+.tariff-item.blast .join-link-arrow {
+  background-color: #000;
+}
+
+.tariff-item .tariff-item-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 13.8vw;
+  background-size: cover;
+  margin-bottom: 4.3vw;
+}
+
+.tariff-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2.7vw;
+}
+
+.tariff-item h3 {
+  font-family: "Mona-Sans";
+  font-size: 4vw;
+  font-weight: 700;
+  line-height: 5.2vw;
+  color: rgba(255, 255, 255, 1);
+  mix-blend-mode: exclusion;
+}
+
+.tariff-item p {
+  text-align: center;
+  font-family: "Inter";
+  font-size: 1vw;
+  font-weight: 500;
+  line-height: 1.6vw;
+  text-align: center;
+  margin-bottom: 3vw;
+}
+
+.tarif-price {
+  display: block;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 3.4vw;
+  font-weight: 700;
+  line-height: 4.4vw;
+  margin-bottom: 2.6vw;
+}
+
+.tariff-item .join-link {
+  width: 100%;
+}
+.tariff-item .join-link svg {
+  fill: #fff;
+}
+.tariff-item .app {
+  width: 100%;
+}
+
+.tariff-item .card-bottom-info {
+  margin-top: 2.7vw;
+}
+
 /* FOOTER =============================== */
 
 footer {
@@ -1025,108 +1236,4 @@ footer .arrow-icon {
 
 .popup-content .popup-title-container svg {
   fill: #000;
-}
-
-/* portfolio-slider-section =========================================== */
-.portfolio-slider-section {
-  padding: 14vw 0 10vw 0;
-  overflow: hidden;
-}
-
-.portfolio-swiper-container {
-  position: relative;
-  width: 100%;
-  margin-bottom: 8.1vw;
-}
-
-.portfolio-swiper-container .swiper-slide {
-  /* height: 32vw !important; */
-  overflow: hidden;
-  height: auto;
-  box-shadow: 0px 7px 15px 0px rgba(0, 0, 0, 0.07);
-  transition: transform 0.3s ease;
-}
-
-.portfolio-swiper-container .swiper-slide img {
-  object-fit: cover;
-}
-
-.portfolio-slider-section .title-container {
-  width: 90vw;
-  margin: 0 auto;
-  margin-bottom: 7.1vw;
-}
-
-.portfolio-slider-section .title-container svg {
-  display: block;
-  width: 5.3vw;
-  margin: 0 auto;
-  fill: #000;
-  margin-bottom: 2vw;
-}
-
-.portfolio-slider-section .title-container .title {
-  text-align: center;
-}
-
-.portfolio-swiper-container .swiper-navigation svg {
-  width: 1.1vw;
-  height: 1.1vw;
-  fill: #fff;
-}
-
-.portfolio-swiper-container .swiper-prev svg {
-  transform: rotate(-135deg);
-}
-.portfolio-swiper-container .swiper-next svg {
-  transform: rotate(45deg);
-}
-
-.portfolio-swiper-container .swiper-navigation {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  height: 0px;
-  transform: translateX(-50%) translateY(-50%);
-  display: flex;
-  align-items: flex-end;
-  z-index: 999;
-  gap: 35vw;
-}
-
-.portfolio-swiper-container .swiper-prev {
-  backdrop-filter: blur(10px);
-  width: 6.3vw;
-  height: 6.3vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 100%;
-  border: 1px solid rgb(255 255 255 / 19%);
-  cursor: pointer;
-  background: linear-gradient(
-    169.7deg,
-    rgba(255, 255, 255, 0.16) -17.85%,
-    rgba(255, 255, 255, 0) 117.02%
-  );
-}
-.portfolio-swiper-container .swiper-next {
-  backdrop-filter: blur(10px);
-  width: 6.3vw;
-  height: 6.3vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 100%;
-  border: 1px solid rgb(255 255 255 / 19%);
-  cursor: pointer;
-  background: linear-gradient(
-    169.7deg,
-    rgba(255, 255, 255, 0.16) -17.85%,
-    rgba(255, 255, 255, 0) 117.02%
-  );
-}
-
-.portfolio-slider-section .join-link {
-  margin: 0 auto;
 }
