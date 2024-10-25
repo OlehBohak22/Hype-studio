@@ -1,9 +1,9 @@
 /* Основний стиль для кнопки */
 .join-link button {
-  font-family: 'Mono-Sans';
+  font-family: "Mono-Sans";
   text-transform: uppercase;
   color: canvasText;
-  padding: 1rem 5rem;
+  padding: 1rem 4rem;
   border: 0;
   background: transparent;
   cursor: pointer;
@@ -13,7 +13,7 @@
 
 /* Ефекти на псевдоелемент при ховері на .join-link */
 .join-link:hover button::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   opacity: calc(var(--intent, 0) * 0.0875);
@@ -26,7 +26,7 @@
 }
 
 .sr-only {
-  position: absolute;
+  position: absolute !important;
   width: 1px;
   height: 1px;
   padding: 0;
@@ -41,7 +41,7 @@
 button > span:not(.sr-only) {
   position: relative;
   color: transparent;
-  font-family: 'Mona-sans';
+  font-family: "Mona-sans";
   font-size: 1.1vw;
   font-weight: 800;
 }
@@ -70,7 +70,7 @@ button > span:not(.sr-only)::after {
 @keyframes flash {
   0%,
   20% {
-    content: '_';
+    content: "_";
   }
   40% {
     content: var(--char-1);
@@ -128,7 +128,7 @@ button > span:not(.sr-only)::after {
 
 .app {
   position: relative;
-  font-family: 'Mona-sans';
+  font-family: "Mona-sans";
   font-size: 1.1vw;
   font-weight: 800;
   display: flex;
@@ -145,13 +145,18 @@ button > span:not(.sr-only)::after {
   border-image-slice: 1; /* Розріз градієнта для рамки */
   text-align: center;
   backdrop-filter: blur(10px);
+  background: linear-gradient(
+    169.7deg,
+    rgba(255, 255, 255, 0.0528) -17.85%,
+    rgba(255, 255, 255, 0) 117.02%
+  );
 }
 
 .app::before,
 .app::after,
 .app .corner-top-right,
 .app .corner-bottom-left {
-  content: '';
+  content: "";
   position: absolute;
   border: 0.1vw solid black;
   width: 0.91vw;
@@ -213,7 +218,7 @@ button > span:not(.sr-only)::after {
 .lazure .app:after,
 .lazure .app .corner-top-right,
 .lazure .app .corner-bottom-left {
-  content: '';
+  content: "";
   position: absolute;
   border: 0.06vw solid rgba(0, 208, 210, 1);
   width: 0.91vw;

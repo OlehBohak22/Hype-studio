@@ -284,9 +284,48 @@ header .container.header-wrapper {
   fill: rgba(255, 255, 255, 1);
 }
 
+.about-page .hero-section {
+  background-image: url(../img/about-page/about-hero-bg.jpg);
+  padding-top: 23vw;
+}
+
+.about-page .hero-title-container h1 {
+  text-align: center;
+  margin-bottom: 4.6vw;
+  mix-blend-mode: exclusion;
+}
+
+.about-page .hero-section .join-link {
+  margin: 0 auto;
+}
+
+.about-page .hero-section .hero-bottom-container {
+  margin-top: 4.6vw;
+}
+
+.about-page.gallery .hero-section {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0) 50%
+    ),
+    url(../img/gallery-page/gallery-hero-bg.jpg);
+  padding-top: 23vw;
+}
+
+.about-page.quantum .hero-section {
+  background-image: url(../img/tariff/quantum-hero-bg.jpg);
+}
+.about-page.hyper .hero-section {
+  background-image: url(../img/tariff/hyper-hero-bg.jpg);
+}
+.about-page.blast .hero-section {
+  background-image: url(../img/tariff/blast-hero-bg.jpg);
+}
+
 /* ABOUT SECTION ======================================= */
 
-.about-section {
+.about-section-main {
   position: relative;
   background-image: url(../img/main-page/about/about-bg.jpg);
   background-repeat: no-repeat;
@@ -295,7 +334,7 @@ header .container.header-wrapper {
   z-index: 1;
 }
 
-.about-section h2 {
+.about-section-main h2 {
   position: relative;
   transform: translateY(4.5vw);
   font-family: "Mona-Sans";
@@ -539,6 +578,7 @@ header .container.header-wrapper {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 10vw 0;
+  height: 100vh;
 }
 
 .why-section h2 {
@@ -563,11 +603,11 @@ header .container.header-wrapper {
   bottom: -3vw;
 }
 
-.why-card-list {
+/* .why-card-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
+} */
 
 .why-card-item {
   width: fit-content;
@@ -640,13 +680,13 @@ header .container.header-wrapper {
   height: 100%;
 }
 
-.portfolio-slider-section .title-container {
+.title-container {
   width: 90vw;
   margin: 0 auto;
   margin-bottom: 7.1vw;
 }
 
-.portfolio-slider-section .title-container svg {
+.title-container svg {
   display: block;
   width: 5.3vw;
   margin: 0 auto;
@@ -824,6 +864,732 @@ header .container.header-wrapper {
 
 .tariff-item .card-bottom-info {
   margin-top: 2.7vw;
+}
+
+/* FORM SECTION ========================== */
+
+.form-section {
+}
+
+.form-container-bg-wrapper {
+  background-image: url(../img/form-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 6vw 0;
+}
+
+.form-section h2 {
+  text-align: center;
+  width: 60vw;
+  margin: 0 auto;
+  mix-blend-mode: difference;
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  margin-bottom: 24vw;
+}
+
+.form-section .form {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  width: 71.5vw;
+  margin: 0 auto;
+}
+
+.form-section .form .form-container {
+  background-color: #fff;
+
+  padding: 3.1vw;
+  padding-top: 4vw;
+}
+
+.form-section .form .form-desc-container {
+  background-color: rgba(0, 208, 210, 1);
+  padding: 3.1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-desc-container .join-link-arrow {
+  background-color: #000;
+}
+
+.form-desc-container span.top-span {
+  display: block;
+  font-family: "Mona-Sans";
+  font-size: 1vw;
+  font-weight: 600;
+  line-height: 2vw;
+  color: #000;
+  margin-bottom: 0.9vw;
+}
+
+.form-desc-container h4 {
+  font-family: "Mona-Sans";
+  font-size: 1.3vw;
+  font-weight: 700;
+  line-height: 1.8vw;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 1vw;
+}
+
+.form-desc-container p {
+  font-family: "Mona-Sans";
+  font-size: 1vw;
+  font-weight: 600;
+  line-height: 1.4vw;
+  margin-bottom: 2.6vw;
+  color: #fff;
+}
+
+.form-section .form .form-container .form-input-container:not(:last-child) {
+  margin-bottom: 4.1vw;
+}
+
+/* GIFT_SECTION ======================= */
+
+.gift-section {
+  padding: 7.4vw 0 4.4vw 0;
+}
+
+.gift-section h2 {
+  font-family: "Mona-Sans";
+  font-size: 1.1vw;
+  font-weight: 700;
+  line-height: 1.2vw;
+  letter-spacing: 1.33em;
+  text-align: center;
+  margin-bottom: 8vw;
+  text-transform: uppercase;
+}
+
+.gift-desc-container {
+  position: relative;
+  & img {
+    position: absolute;
+    top: 0;
+    right: 12vw;
+    width: 35vw;
+  }
+}
+
+.gift-desc-container p {
+  font-family: "Mona-Sans";
+  font-size: 1.8vw;
+  font-weight: 700;
+  line-height: 2.8vw;
+  letter-spacing: -0.02em;
+  width: 25vw;
+  margin-bottom: 3.1vw;
+}
+
+.gift-desc-container h3 {
+  font-family: "Mona-Sans";
+  font-size: 14.5vw;
+  font-weight: 700;
+  line-height: 16vw;
+  letter-spacing: -0.03em;
+  text-align: left;
+  text-transform: uppercase;
+  color: rgba(22, 22, 22, 1);
+  margin-top: 4.4vw;
+}
+
+/* HISTORY_SECTION ======================= */
+
+.history-section {
+  padding: 6.7vw 0 9.1vw 0;
+}
+
+.history-section h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.history-container {
+  display: flex;
+  gap: 2vw;
+  margin-bottom: 12vw;
+}
+
+.history-desc-container h4 {
+  font-family: "Mona-Sans";
+  font-size: 1.8vw;
+  font-weight: 700;
+  line-height: 2.2vw;
+  letter-spacing: -0.03em;
+  text-align: left;
+  width: 35vw;
+  margin-bottom: 2.3vw;
+}
+
+.history-desc-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.history-desc-container p {
+  font-family: "Mona-Sans";
+  font-size: 1vw;
+  font-weight: 700;
+  line-height: 1.8vw;
+  letter-spacing: -0.03em;
+  text-align: left;
+  width: 39vw;
+  text-indent: 60px;
+}
+
+.desc-image {
+  width: 18.3vw;
+  height: 18.3vw;
+  border: 0.05vw solid rgba(0, 0, 0, 1);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3vw;
+}
+
+.desc-bottom-container {
+  display: flex;
+  gap: 10vw;
+  align-items: flex-end;
+}
+
+.desc-bottom-container p {
+  font-family: "Mona-Sans";
+  font-size: 1vw;
+  font-weight: 500;
+  line-height: 1vw;
+  letter-spacing: -0.02em;
+  text-align: right;
+  width: 10vw;
+  margin-bottom: 0.5vw;
+}
+
+.desc-bottom-container span {
+  display: block;
+  margin-left: auto;
+  width: fit-content;
+  font-family: "Mona-Sans";
+  font-size: 2.2vw;
+  font-weight: 500;
+  line-height: 2.2vw;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.numbers-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.numbers-container h5 {
+  font-family: "Mona-Sans";
+  font-size: 1.8vw;
+  font-weight: 700;
+  line-height: 2.2vw;
+  letter-spacing: -0.03em;
+  text-align: left;
+  width: 10vw;
+}
+
+.numbers-list {
+  display: flex;
+  gap: 6.3vw;
+}
+
+.numbers-list span {
+  display: block;
+  font-family: "Mona-Sans";
+  font-size: 5.2vw;
+  font-weight: 600;
+  line-height: 5.2vw;
+  text-align: left;
+  margin-bottom: 2vw;
+}
+
+.numbers-list p {
+  font-family: "Mona-Sans";
+  font-size: 1vw;
+  font-weight: 500;
+  line-height: 1vw;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: rgba(21, 21, 21, 0.4);
+}
+
+/* OUR_MISSION +===================================== */
+
+.our-mission {
+  padding: 26.8vw 0 8.9vw 0;
+  background-image: url(../img/about-page/our-mission-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.our-mission .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.our-mission h2 {
+  font-family: "Mona-Sans";
+  font-size: 4.5vw;
+  font-weight: 700;
+  line-height: 5vw;
+  letter-spacing: -0.03em;
+  text-align: left;
+  text-transform: uppercase;
+  width: 50vw;
+  color: rgba(255, 255, 255, 1);
+}
+
+.our-mission p {
+  font-family: "Mona-Sans";
+  font-size: 1.6vw;
+  font-weight: 500;
+  line-height: 1.8vw;
+  letter-spacing: -0.03em;
+  text-align: left;
+  width: 25vw;
+  color: rgba(255, 255, 255, 1);
+}
+
+/* ============================ LEARN SECTION ================================= */
+
+.learn-section {
+  position: relative;
+  background-image: url(../img/about-page/learn-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10.7vw 0 17vw 0;
+}
+
+.learn-list {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.learn-item {
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 21vw;
+  height: 21vw;
+  padding: 2.8vw 2vw 2vw 2vw;
+}
+
+.learn-list .column:nth-child(1) .learn-item:nth-child(2) {
+  transform: translateX(5.3vw) translateY(6.9vw);
+}
+.learn-list .column:nth-child(1) .learn-item:nth-child(3) {
+  transform: translateX(34vw) translateY(4vw);
+}
+
+.learn-list .column:nth-child(2) .learn-item:nth-child(1) {
+  transform: translateX(0) translateY(3.5vw);
+}
+.learn-list .column:nth-child(2) .learn-item:nth-child(2) {
+  transform: translateX(-25vw) translateY(-4vw);
+}
+.learn-list .column:nth-child(2) .learn-item:nth-child(3) {
+  transform: translateX(-4.1vw) translateY(0);
+}
+
+.learn-item svg {
+  width: 3.75vw;
+  height: 3.75vw;
+  fill: rgba(0, 208, 210, 1);
+}
+
+.learn-item h4 {
+  font-family: "Mona-Sans";
+  font-size: 1.3vw;
+  font-weight: 700;
+  line-height: 1.6vw;
+  color: rgba(0, 0, 0, 1);
+  margin-bottom: 1.3vw;
+}
+
+.learn-item p {
+  font-family: "Mona-Sans";
+  font-size: 1vw;
+  font-weight: 500;
+  line-height: 1.5vw;
+  color: rgba(0, 0, 0, 1);
+  width: 14vw;
+}
+
+/* PORTFOLIO_SECTION ===================== */
+
+.portfolio-section {
+  padding: 7.8vw 0 12vw 0;
+}
+
+.portfolio-section .title-container {
+  margin-bottom: 3.2vw;
+}
+
+.portfolio-section h2 {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0.5vw;
+}
+
+.portfolio-section p {
+  font-family: "Mona-Sans";
+  font-size: 1.2vw;
+  font-weight: 700;
+  line-height: 1.9vw;
+  text-align: center;
+  width: 17vw;
+  margin: 0 auto;
+}
+
+.gallery-control-panel-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5vw;
+  margin-bottom: 7vw;
+}
+
+.gallery-control-panel-item.active {
+  background-color: rgba(0, 208, 210, 1);
+  outline: none;
+}
+
+.gallery-control-panel-item {
+  font-family: "Mona-Sans";
+  font-size: 1.5vw;
+  font-weight: 600;
+  line-height: 1.5vw;
+  padding: 1.1vw 0;
+  width: 12vw;
+  text-align: center;
+  outline: 0.07vw solid rgba(21, 21, 21, 1);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.gallery-control-panel-item:hover {
+  background-color: rgba(0, 208, 210, 1);
+  border: none;
+}
+
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  margin-bottom: 6.2vw;
+}
+
+.gallery-list li {
+  flex-basis: calc((100% - 2 * 2vw) / 3);
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+.portfolio-gallery-container .join-link {
+  margin: 0 auto;
+}
+
+/* ABOUT SECTION ========================== */
+
+.about-section {
+  position: relative;
+  background-color: rgba(0, 0, 0, 1);
+  padding: 3.5vw;
+  padding-bottom: 2vw;
+  height: 100vh;
+  overflow: hidden;
+  padding-top: 0;
+}
+
+.about-section p,
+.about-section span,
+.about-section h3 {
+  position: relative;
+  z-index: 9;
+  color: rgba(255, 255, 255, 1);
+}
+
+.about-person-info {
+  display: flex;
+  align-items: center;
+}
+
+.about-person-name-container {
+  display: flex;
+  gap: 15vw;
+  align-items: center;
+  margin-bottom: 13vw;
+}
+
+.about-person-number-container p {
+  width: 5vw;
+  font-family: "Mona-Sans";
+  font-size: 0.7vw;
+  font-weight: 500;
+  line-height: 0.7vw;
+  margin-bottom: 0.6vw;
+}
+
+.about-person-number-container span {
+  font-family: "Mona-Sans";
+  font-size: 1.6vw;
+  font-weight: 500;
+  line-height: 1.6vw;
+}
+
+.person-name {
+  position: relative;
+  font-family: "Mona-Sans";
+  font-size: 2.9vw;
+  font-weight: 700;
+  line-height: 3.2vw;
+}
+
+.person-name::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 255, 255, 1);
+  width: 3.5vw;
+  height: 0.05vw;
+  transform: rotate(45deg);
+}
+
+.marker {
+  font-family: "Mona-Sans";
+  font-size: 0.8vw;
+  font-weight: 500;
+  line-height: 0.8vw;
+  text-transform: uppercase;
+}
+
+.person-name-container .marker {
+  margin-top: -1vw;
+}
+
+.person-name-container {
+  display: flex;
+  gap: 3vw;
+}
+
+.about-person-desc-container h3 {
+  font-family: "Mona-Sans";
+  font-size: 2.9vw;
+  font-weight: 700;
+  line-height: 3.2vw;
+  text-transform: uppercase;
+  margin-bottom: 0.7vw;
+}
+
+.about-person-desc-container p {
+  font-family: "Mona-Sans";
+  font-size: 1vw;
+  font-weight: 500;
+  line-height: 1.1vw;
+  width: 34vw;
+  margin-bottom: 2.6vw;
+}
+
+.person-hologram-container {
+  width: 30vw;
+  margin-left: -5vw;
+  margin-right: -8vw;
+}
+
+.tattoo-style-container {
+  display: flex;
+}
+
+.tatto-style {
+  position: relative;
+  display: flex;
+  font-family: "Mona-Sans";
+  font-size: 2.9vw;
+  font-weight: 700;
+  line-height: 3.2vw;
+  width: 21vw;
+  text-align: end;
+  text-transform: uppercase;
+}
+
+.tatto-style::before {
+  position: absolute;
+  left: 0;
+  content: "";
+  background-color: rgba(255, 255, 255, 1);
+  width: 3.5vw;
+  height: 0.05vw;
+  transform: rotate(-45deg);
+}
+
+.tattoo-style-container .marker {
+  margin-top: -1vw;
+}
+
+.tattoo-style-container:not(:last-child) {
+  margin-bottom: 6vw;
+  margin-left: 3vw;
+}
+
+.tattoo-style-container.experience .tatto-style {
+  display: block;
+  width: 15vw;
+}
+
+.about-section .vector2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+}
+.about-section .vector1 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 63.3vw;
+  z-index: 9;
+}
+
+.about-swiper-container {
+  overflow: hidden;
+  width: 100%;
+  /* height: 35vw; */
+}
+
+.about-swiper-container .swiper-navigation {
+  position: absolute;
+  bottom: 3.9vw;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 0.8vw;
+  z-index: 99;
+  transform: translateX(-50%);
+}
+
+.about-swiper-container .swiper-navigation .swiper-prev,
+.about-swiper-container .swiper-navigation .swiper-next {
+  background-color: rgba(0, 208, 210, 1);
+  width: 3.3vw;
+  height: 3.3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.about-swiper-container .swiper-navigation .swiper-prev svg,
+.about-swiper-container .swiper-navigation .swiper-next svg {
+  width: 0.8vw;
+  height: 0.8vw;
+  transition: fill 0.5s;
+}
+
+.about-swiper-container .swiper-navigation .swiper-prev:hover svg,
+.about-swiper-container .swiper-navigation .swiper-next:hover svg {
+  width: 0.8vw;
+  height: 0.8vw;
+  fill: #fff;
+}
+
+.about-swiper-container .swiper-navigation .swiper-prev svg {
+  transform: rotate(225deg);
+}
+
+.about-swiper-container .swiper-navigation .swiper-next svg {
+  transform: rotate(45deg);
+}
+
+.about-swiper-container .swiper-pagination-horizontal {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+.about-swiper-container .pagination .swiper-pagination-bullet {
+  width: 3.3vw;
+  height: 0.15vw;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 0;
+  opacity: 1;
+  margin: 0 !important;
+  transition: 0.3s;
+}
+
+.about-swiper-container .pagination .swiper-pagination-bullet-active {
+  width: 3.3vw;
+  height: 0.3vw;
+  background-color: rgba(0, 208, 210, 1);
+  border-radius: 0;
+}
+
+.custom-pagination {
+  position: absolute;
+  bottom: 3.9vw;
+  right: 3.6vw;
+  z-index: 100;
+}
+
+.custom-pagination .pagination-bullet {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  font-family: "Mona-Sans";
+  font-size: 0.9vw;
+  font-weight: 500;
+  line-height: 1.3vw;
+  color: rgba(255, 255, 255, 1);
+  text-align: end;
+  cursor: pointer;
+}
+
+.custom-pagination .pagination-bullet.active {
+  color: rgba(0, 208, 210, 1);
+}
+
+.custom-pagination .pagination-bullet:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 0.05vw;
+  height: 1.6vw;
+  background-color: rgba(255, 255, 255, 1);
+  margin-right: 0.3vw;
+  margin-bottom: 0.3vw;
+  margin-top: 0.3vw;
+}
+
+.no-controls {
+  pointer-events: none; /* Забороняє взаємодію з елементом */
+}
+
+.no-controls::-webkit-media-controls {
+  display: none !important; /* Прибирає елементи управління у WebKit-браузерах (Safari, Chrome) */
+}
+
+.no-controls::-webkit-media-controls-overlay-play-button {
+  display: none !important; /* Прибирає кнопку Play у Safari на мобільних пристроях */
+}
+
+.person-main-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: end;
+  margin-bottom: 5vw;
 }
 
 /* FOOTER =============================== */
@@ -1110,7 +1876,7 @@ footer .arrow-icon {
   visibility: visible;
 }
 
-.popup-overlay.active .popup-content {
+.popup-overlay.active .form {
   transform: scale(1); /* Розгортаємо контент */
 }
 
@@ -1147,11 +1913,10 @@ footer .arrow-icon {
 
 .popup-close:hover {
   color: rgba(0, 208, 210, 1);
-
   transform: rotate(180deg);
 }
 
-.popup-content label {
+.form label {
   display: block;
   font-family: "Mona-Sans";
   font-size: 0.9vw;
@@ -1160,7 +1925,7 @@ footer .arrow-icon {
   cursor: pointer;
 }
 
-.popup-content input {
+.form input {
   border: none;
   border-bottom: 0.05vw solid #000;
   width: 100%;
@@ -1192,22 +1957,15 @@ footer .arrow-icon {
   color: rgba(0, 208, 210, 1);
 }
 
-.form-input-container input:focus {
-}
-
-.popup-content .form-container .form-input-container:not(:last-child) {
+.form .form-container .form-input-container:not(:last-child) {
   margin-bottom: 2.7vw;
-}
-
-.popup-content .form-container {
-  margin-bottom: 2vw;
 }
 
 .popup-content .app {
   width: 100%;
 }
 
-.popup-content .join-link {
+.popup-content.join-link {
   width: 100%;
 }
 
@@ -1230,10 +1988,10 @@ footer .arrow-icon {
   text-decoration: underline;
 }
 
-.popup-content .arrow-icon {
+.form .arrow-icon {
   fill: rgba(255, 255, 255, 1);
 }
 
-.popup-content .popup-title-container svg {
+.form .popup-title-container svg {
   fill: #000;
 }
