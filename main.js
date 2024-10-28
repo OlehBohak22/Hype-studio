@@ -1,16 +1,16 @@
-import Swiper from "swiper";
-import "swiper/css";
-import {
-  Navigation,
-  Pagination,
-  EffectCards,
-  EffectCoverflow,
-} from "swiper/modules";
-import "swiper/css/navigation";
+// import Swiper from "swiper";
+// import "swiper/css";
+// import {
+//   Navigation,
+//   Pagination,
+//   EffectCards,
+//   EffectCoverflow,
+// } from "swiper/modules";
+// import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const swiper = new Swiper(".about-swiper-container", {
-  modules: [Navigation, Pagination],
+  // modules: [Navigation, Pagination],
 
   slidesPerView: 1,
   spaceBetween: 25,
@@ -53,7 +53,7 @@ swiper.on("slideChange", updateCustomPagination);
 updateCustomPagination();
 
 const swiperEx = new Swiper(".ex-student-swiper-container", {
-  modules: [EffectCards, Navigation],
+  // modules: [EffectCards, Navigation],
   navigation: {
     nextEl: ".swiper-btn-next",
     prevEl: ".swiper-btn-prev",
@@ -432,7 +432,7 @@ function applyTiltToActiveSlide() {
 }
 
 new Swiper(".portfolio-swiper-container", {
-  modules: [EffectCoverflow, Navigation],
+  // modules: [EffectCoverflow, Navigation],
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
