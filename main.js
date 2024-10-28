@@ -1,13 +1,4 @@
-// import Swiper from "swiper";
-// import "swiper/css";
-// import {
-//   Navigation,
-//   Pagination,
-//   EffectCards,
-//   EffectCoverflow,
-// } from "swiper/modules";
-// import "swiper/css/navigation";
-import "swiper/css/pagination";
+
 
 const swiper = new Swiper(".about-swiper-container", {
   // modules: [Navigation, Pagination],
