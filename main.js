@@ -402,6 +402,34 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // PORTFOLIO SWIPER SECTION ======================
+let previousActiveSlide = null;
+
+// Функція для застосування Vanilla Tilt на активний слайд
+function applyTiltToActiveSlide() {
+  // Знаходимо новий активний слайд
+  const activeSlide = document.querySelector(
+    ".swiper-slide-active .tilt-container"
+  );
+
+  // Видаляємо Vanilla Tilt з попереднього активного слайда, якщо він існує
+  if (previousActiveSlide && previousActiveSlide !== activeSlide) {
+    previousActiveSlide.vanillaTilt &&
+      previousActiveSlide.vanillaTilt.destroy();
+  }
+
+  // Додаємо Vanilla Tilt до нового активного слайда
+  if (activeSlide) {
+    VanillaTilt.init(activeSlide, {
+      max: 20, // Максимальний кут нахилу
+      speed: 400, // Швидкість анімації
+      glare: true, // Ефект відблиску
+      "max-glare": 0.3, // Інтенсивність відблиску
+    });
+  }
+
+  // Оновлюємо попередній активний слайд
+  previousActiveSlide = activeSlide;
+}
 
 new Swiper(".portfolio-swiper-container", {
   modules: [EffectCoverflow, Navigation],
@@ -412,15 +440,18 @@ new Swiper(".portfolio-swiper-container", {
   spaceBetween: 120,
   loop: true,
   coverflowEffect: {
-    rotate: 30, // Кут повороту слайдів
-    stretch: 80, // Міжслайдова відстань
-    depth: 10, // Глибина 3D ефекту
+    rotate: 30,
+    stretch: 80,
+    depth: 10,
     modifier: 1,
-    slideShadows: false, // Додає тінь на слайди
+    slideShadows: false,
   },
-
   navigation: {
     prevEl: ".portfolio-swiper-container .swiper-prev",
     nextEl: ".portfolio-swiper-container .swiper-next",
+  },
+  on: {
+    init: () => applyTiltToActiveSlide(),
+    slideChangeTransitionEnd: () => applyTiltToActiveSlide(),
   },
 });

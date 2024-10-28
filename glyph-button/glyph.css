@@ -242,6 +242,17 @@ button > span:not(.sr-only)::after {
   border-top: none;
 }
 
+footer .join-link button {
+  padding: 1rem 1.5rem;
+}
+footer .app {
+  background: linear-gradient(
+    169.7deg,
+    rgba(255, 255, 255, 0.16) -17.85%,
+    rgba(255, 255, 255, 0) 117.02%
+  );
+}
+
 @media (max-width: 1024px) {
   .join-link button {
     padding: 1rem 2rem;

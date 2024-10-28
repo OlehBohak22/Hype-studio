@@ -672,10 +672,15 @@ header .container.header-wrapper {
 
 .portfolio-swiper-container .swiper-slide {
   /* height: 32vw !important; */
-  overflow: hidden;
+  /* overflow: hidden; */
   height: auto;
-  box-shadow: 0px 7px 15px 0px rgba(0, 0, 0, 0.07);
   transition: transform 0.3s ease;
+}
+
+.tilt-container {
+  object-fit: cover;
+  height: 100%;
+  box-shadow: 0px 7px 15px 0px rgba(0, 0, 0, 0.07);
 }
 
 .portfolio-swiper-container .swiper-slide img {
