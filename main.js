@@ -420,8 +420,8 @@ function applyTiltToActiveSlide() {
   // Додаємо Vanilla Tilt до нового активного слайда
   if (activeSlide) {
     VanillaTilt.init(activeSlide, {
-      max: 20, // Максимальний кут нахилу
-      speed: 400, // Швидкість анімації
+      max: 5, // Максимальний кут нахилу
+      speed: 1000, // Швидкість анімації
       glare: true, // Ефект відблиску
       "max-glare": 0.3, // Інтенсивність відблиску
     });
