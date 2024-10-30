@@ -626,6 +626,28 @@
     border-radius: 10.6vw;
   }
 
+  /* ABOUT_PAGE HERO =============================== */
+
+  .about-page .hero-section {
+    background-image: url(../img/about-page/mob-about-hero-bg.jpg);
+    padding-top: 56.5vw;
+  }
+
+  .about-page .hero-title-container h1 {
+    margin-bottom: 25.3vw;
+    font-size: 10vw;
+    line-height: 10vw;
+  }
+
+  .about-page .hero-section .hero-bottom-container {
+    margin-top: 20vw;
+  }
+
+  .hero-bottom-container a svg {
+    width: 1.7vw;
+    height: 1.7vw;
+  }
+
   /* FOOTER ====================== */
 
   .grid-container {
