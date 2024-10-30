@@ -1,5 +1,3 @@
-
-
 const swiper = new Swiper(".about-swiper-container", {
   // modules: [Navigation, Pagination],
 
@@ -427,7 +425,7 @@ new Swiper(".portfolio-swiper-container", {
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
-  slidesPerView: 3,
+  slidesPerView: 1.5,
   spaceBetween: 120,
   loop: true,
   coverflowEffect: {
@@ -444,5 +442,13 @@ new Swiper(".portfolio-swiper-container", {
   on: {
     init: () => applyTiltToActiveSlide(),
     slideChangeTransitionEnd: () => applyTiltToActiveSlide(),
+  },
+
+  breakpoints: {
+    1024: {
+      // на екранах шириною 768px і більше
+      slidesPerView: 3,
+      spaceBetween: 120,
+    },
   },
 });

@@ -2,17 +2,28 @@
 gsap.registerPlugin(Draggable, ScrollTrigger);
 
 const images = gsap.utils.toArray(".item");
-
 const imageSize = images.length;
 const total = images.length;
-const degree = 120 / total;
+
+let degree = window.innerWidth < 1024 ? 50 / total : 120 / total;
+
+// Функція для оновлення degree залежно від ширини екрану
+const updateDegree = () => {
+  degree = window.innerWidth < 1024 ? 50 / total : 120 / total;
+  // Оновлення анімації з новим значенням degree
+  init(); // Перезапускає анімацію
+  draggable(); // Перезапускає Draggable
+};
+
+// Додаємо слухача події для оновлення degree при зміні розміру вікна
+window.addEventListener("resize", updateDegree);
 
 const init = () => {
   const timeline = gsap.timeline({
     scrollTrigger: {
-      trigger: ".why-card-list", // Точкою запуску буде ваш контейнер з картками
-      start: "top 80%", // Коли верхня частина карток досягне 80% висоти вікна
-      toggleActions: "play none none none", // Запускає анімацію тільки один раз при скролі
+      trigger: ".why-card-list",
+      start: "top 80%",
+      toggleActions: "play none none none",
     },
   });
 
@@ -74,7 +85,7 @@ const draggable = () => {
     type: "rotation",
     snap: (value) => Math.round(value / degree) * degree,
     onDragStart: function () {
-      start = this.rotation % 360; // Залишок від ділення
+      start = this.rotation % 360;
     },
     onDragEnd: function () {
       const rotation = this.rotation % 360;

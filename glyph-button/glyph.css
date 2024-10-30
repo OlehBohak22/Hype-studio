@@ -1,7 +1,6 @@
 /* Основний стиль для кнопки */
 .join-link button {
   font-family: "Mono-Sans";
-  text-transform: uppercase;
   color: canvasText;
   padding: 1rem 4rem;
   border: 0;
@@ -47,9 +46,9 @@ button > span:not(.sr-only) {
 }
 
 /* Колір тексту при ховері на .join-link */
-.best-section .join-link button > span:not(.sr-only)::after {
+/* .best-section .join-link button > span:not(.sr-only)::after {
   color: rgba(0, 208, 210, 1);
-}
+} */
 
 /* Стилі для анімації тексту */
 button > span:not(.sr-only)::after {
@@ -273,14 +272,14 @@ footer .app {
   }
 
   .join-link-arrow {
-    width: 17.6vw;
-    height: 17.6vw;
+    width: 14.4vw;
+    height: 14.4vw;
   }
 
   .arrow-icon {
     fill: rgb(0, 0, 0);
-    width: 3.2vw;
-    height: 3.2vw;
+    width: 2.6vw;
+    height: 2.6vw;
   }
 
   .join-link-text::before,
@@ -318,5 +317,23 @@ footer .app {
     left: -1px;
     border-right: none;
     border-top: none;
+  }
+
+  .app {
+    backdrop-filter: blur(4.4px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .join-link button {
+    padding: 1rem 2rem;
+  }
+
+  .app::before,
+  .app::after,
+  .app .corner-top-right,
+  .app .corner-bottom-left {
+    width: 2vw !important;
+    height: 2vw !important;
   }
 }

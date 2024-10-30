@@ -454,7 +454,7 @@ header .container.header-wrapper {
 .about-char-item:nth-child(4) {
   flex: 1;
 }
-.about-char-item div {
+.about-char-item .char-radius {
   border-radius: 100%;
   width: 2.8vw;
   height: 2.8vw;
@@ -570,6 +570,7 @@ header .container.header-wrapper {
   width: 21vw;
   margin: 0 auto;
   color: #fff;
+  text-align: center;
 }
 
 /* WHY_SECTION =============================== */
@@ -1338,7 +1339,6 @@ header .container.header-wrapper {
   display: flex;
   gap: 15vw;
   align-items: center;
-  margin-bottom: 13vw;
 }
 
 .about-person-number-container p {
@@ -1596,8 +1596,6 @@ header .container.header-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-self: end;
-  margin-bottom: 5vw;
 }
 
 /* FOOTER =============================== */
@@ -2016,4 +2014,234 @@ footer .arrow-icon {
 
 .form .popup-title-container svg {
   fill: #000;
+}
+
+/* 404 PAGE ========================================= */
+
+.error-page .best-section {
+  padding: 9.1vw 0 10.4vw 0;
+  /* height: 100vh; */
+}
+
+.error-page .header-logo {
+  fill: rgba(255, 255, 255, 1);
+}
+
+.error-page .header-menu-btn > span {
+  color: rgba(255, 255, 255, 1);
+}
+
+.error-wrapper span {
+  font-family: "Druk Cyr";
+  font-size: 27vw;
+  font-weight: 700;
+  line-height: 27vw;
+  color: rgba(255, 255, 255, 1);
+}
+
+.error-page .join-link {
+  margin: 0 auto;
+}
+
+.error-page.thanks .join-link {
+  margin: 0;
+}
+
+.error-wrapper img {
+  width: 33.4vw;
+}
+
+.error-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.2vw;
+  margin-bottom: 2.2vw;
+}
+
+.error-text {
+  font-family: "Mona-Sans";
+  font-size: 1.6vw;
+  font-weight: 700;
+  line-height: 2.1vw;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  margin-bottom: 2.2vw;
+  text-align: center;
+}
+.error-text-thank {
+  width: 60%;
+}
+.error-page .error-container .join-link {
+  justify-content: center;
+}
+
+.error-page .error-container .app {
+  background-color: rgba(255, 255, 255, 1);
+  border: none;
+}
+
+.error-page .arrow-icon {
+  fill: rgba(255, 255, 255, 1);
+}
+
+.error-page .error-container .app::before,
+.error-page .error-container .app::after,
+.error-page .error-container .app .corner-top-right,
+.error-page .error-container .app .corner-bottom-left {
+  border: 0.06vw solid rgba(0, 208, 210, 1);
+}
+
+.error-page .error-container .app::before {
+  border-right: none;
+  border-bottom: none;
+  top: 0;
+  left: 0;
+}
+
+.error-page .error-container .app::after {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+.error-page .error-container .app .corner-top-right {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+}
+
+.error-page .error-container .app .corner-bottom-left {
+  bottom: 0;
+  left: 0;
+  border-right: none;
+  border-top: none;
+}
+
+/* THANKS_PAGE ============================= */
+
+.thanks-container {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 10vw;
+}
+.thank-section {
+  min-height: 100vh;
+}
+.thanks-container img {
+  width: 35.8vw;
+}
+.block-width {
+  width: max-content;
+}
+
+.thanks-container h1 {
+  font-family: "Druk Cyr";
+  font-size: 16.2vw;
+  font-weight: 700;
+  line-height: 16.2vw;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  margin-bottom: 1.8vw;
+  text-indent: -1.8vw;
+}
+
+.error-page .thanks-container .join-link {
+  justify-content: start;
+}
+
+.error-page .thanks-container .error-text {
+  text-align: left;
+  width: 34vw;
+}
+
+.error-page .thanks-container,
+.error-page .error-container {
+  position: relative;
+  z-index: 99;
+}
+
+.best-section {
+  position: relative;
+  background-color: rgba(0, 0, 0, 1);
+  padding: 4.6vw 0 6vw 0;
+  overflow: hidden;
+}
+
+.best-section::before,
+.best-section::after {
+  content: "";
+  position: absolute;
+  width: 35.5vw; /* Розмір блоку для блюру */
+  height: 35.5vw; /* Розмір блоку для блюру */
+  background-color: rgba(0, 208, 210, 1); /* Суцільний колір з прозорістю */
+  filter: blur(10vw); /* Ефект блюру для плями */
+}
+
+.best-section::before {
+  top: -12vw; /* Відступ для позиціонування в верхньому лівому куті */
+  left: -12vw;
+}
+
+.best-section::after {
+  bottom: -12vw; /* Відступ для позиціонування в нижньому правому куті */
+  right: -12vw;
+}
+
+.smiles-icon {
+  width: 18vw;
+  margin: 0 auto;
+  margin-bottom: 3.6vw;
+}
+
+.best-bg-wrap {
+  position: relative;
+  width: 55vw;
+  border: 0.05vw solid rgba(255, 255, 255, 1);
+  margin: 0 auto;
+  margin-bottom: 5vw;
+}
+
+.best-bg-wrap h2 {
+  position: absolute;
+  font-family: "Druk Cyr";
+  font-size: 14.5vw;
+  font-weight: 700;
+  line-height: 14.5vw;
+  bottom: 9.1vw;
+  left: -14vw;
+  color: rgba(255, 255, 255, 1);
+  white-space: nowrap;
+}
+
+.best-desc-text {
+  font-family: "Mona-Sans";
+  font-size: 1.8vw;
+  font-weight: 500;
+  line-height: 2.4vw;
+  color: rgba(255, 255, 255, 1);
+  width: 40vw;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 5.2vw;
+}
+
+.best-link-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.best-link-container img {
+  width: 15.3vw;
+  z-index: 1;
+}
+
+.best-link-container .app {
+  border: 1px solid #1a1a1a;
+  color: rgba(0, 208, 210, 1);
 }
